@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Cavaleiros do Zodíaco</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>Cavaleiros do Zodíaco</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="personagem.html">Personagens</a></li>
+                <li><a href="episodios.html">Episódios</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+
+    <main class="contact">
+        <h2>Entre em Contato</h2>
+        <p>Estamos à disposição para esclarecer dúvidas e ouvir sugestões. Envie sua mensagem através do formulário abaixo ou entre em contato pelos canais fornecidos.</p>
+<br>
+        <!-- Caixa envolvente do Formulário -->
+        <section class="contact-box">
+            <div class="contact-form">
+                <form action="submit.php" method="POST">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui..." rows="5" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Informações de Contato -->
+        <div class="contact-info-container">
+            <h3>Informações</h3>
+            <p>E-mail: <a href="mailto:contato@cavaleirosdozodiaco.com">contato@cavaleirosdozodiaco.com</a></p>
+            <p>Telefone: <a href="tel:+551112345678">+55 (11) 1234-5678</a></p>
+            <p>Endereço: Rua das Estrelas, 456, Cosmos, SP</p>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cavaleiros do Zodíaco. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

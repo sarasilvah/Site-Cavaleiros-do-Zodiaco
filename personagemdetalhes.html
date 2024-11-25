@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Personagem - Cavaleiros do Zodíaco</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Cavaleiros do Zodíaco</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="personagem.html">Personagens</a></li>
+                <li><a href="episodios.html">Episódios</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <!-- Botão de Voltar -->
+<a href="personagem.html" class="back-btn">Voltar</a>
+
+    <!-- Detalhes do Personagem -->
+    <section class="character-details">
+        <h2>Detalhes do Personagem</h2>
+
+        <div class="character-info">
+            <img id="character-img" src="" alt="" />
+            <h3 id="character-name"></h3>
+            <p id="character-description"></p>
+        </div>
+        <br>
+        <br>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cavaleiros do Zodíaco Fan Site | Todos os direitos reservados.</p>
+    </footer>
+
+    </section>
+
+    <script>
+        // Pega o parâmetro 'id' da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const characterId = urlParams.get('id');
+
+        // Definir os dados dos personagens
+        const characters = {
+            pegasus: {
+                name: "Seiya de Pegasus",
+                img: "IMG/Seiya.jpg",
+                description: "Seiya de Pégaso, um dos Cavaleiros de Bronze mais icônicos, é um jovem órfão que, após um rigoroso treinamento na Grécia, obtém a lendária Armadura de Pégaso. Com um espírito indomável e uma força de vontade inabalável, Seiya se destaca por sua determinação em proteger seus amigos e a deusa Atena. Seus ataques, como o Meteoro de Pégaso e a Comet Nebula, são temidos por seus inimigos. Ao longo de sua jornada, Seiya evolui não apenas como um guerreiro, mas também como pessoa, demonstrando um forte senso de justiça e lealdade"
+            },
+            dragon: {
+                name: "Shiryuu de Dragão",
+                img: "IMG/Shiryuu de Dragão.jpeg",
+                description: "Cavaleiro de Dragão, conhecido por sua força e sabedoria."
+            },
+            phoenix: {
+                name: "Ikki de Fênix",
+                img: "IMG/ikki de Fênix.jpg",
+                description: "O cavaleiro de Fênix, com poderes de renascimento e resiliência."
+            },
+            andromeda: {
+                name: "Shun de Andrômeda",
+                img: "IMG/Shun de Andrômeda.jpg",
+                description: "O Cavaleiro de Andrômeda, com sua corrente poderosa e bondade."
+            },
+            cisne: {
+                name: "Hyoga de Cisne",
+                img: "IMG/Hyoga de Cisne.webp",
+                description: "O Cavaleiro de Cisne, mestre do ataque com gelo."
+            },
+            aquario: {
+                name: "Camus de Aquário",
+                img: "IMG/Camus de Aquário.webp",
+                description: "Um dos Cavaleiros de Ouro, mestre do gelo e da água."
+            },
+            touro: {
+                name: "Aldebaran de Touro",
+                img: "IMG/Aldebaran de Touro.webp",
+                description: "O Cavaleiro de Ouro de Touro, com grande força física e honra."
+            },
+            leao: {
+                name: "Aiolia de Leão",
+                img: "IMG/Aiolia de Leão.webp",
+                description: "O Cavaleiro de Ouro de Leão, conhecido pela sua coragem e destreza."
+            },
+            sagitario: {
+                name: "Aioros de Sagitário",
+                img: "IMG/Aioros de Sagitário.webp",
+                description: "O Cavaleiro de Ouro de Sagitário, protetor dos mais fracos."
+            },
+            escorpiao: {
+                name: "Milo de Escorpião",
+                img: "IMG/Milo de Escorpião.webp",
+                description: "O Cavaleiro de Ouro de Escorpião, mestre do ataque mortal."
+            },
+            peixes: {
+                name: "Afrodite de Peixes",
+                img: "IMG/Afrodite de Peixes.webp",
+                description: "O Cavaleiro de Ouro de Peixes, com poderosas técnicas de flores."
+            },
+            gemeos: {
+                name: "Saga de Gêmeos",
+                img: "IMG/Saga de Gêmeos.webp",
+                description: "O Cavaleiro de Ouro de Gêmeos, com poder de manipular a mente."
+            },
+            capricornio: {
+                name: "Shura de Capricórnio",
+                img: "IMG/Shura de Capricórnio.webp",
+                description: "O Cavaleiro de Ouro de Capricórnio, mestre da espada Excalibur."
+            },
+            virgem: {
+                name: "Shaka de Virgem",
+                img: "IMG/Shaka de Virgem.webp",
+                description: "O Cavaleiro de Ouro de Virgem, mestre da purificação espiritual."
+            },
+            balance: {
+                name: "Shaka de Virgem",
+                img: "IMG/Shaka de Balance.webp",
+                description: "O Cavaleiro de Ouro de Balance, com habilidades psíquicas únicas."
+            }
+        };
+
+        // Atualizar os detalhes do personagem com base no ID da URL
+        if (characters[characterId]) {
+            document.getElementById('character-img').src = characters[characterId].img;
+            document.getElementById('character-img').alt = characters[characterId].name;
+            document.getElementById('character-name').textContent = characters[characterId].name;
+            document.getElementById('character-description').textContent = characters[characterId].description;
+        } else {
+            // Caso o personagem não exista, mostrar mensagem de erro
+            document.getElementById('character-name').textContent = "Personagem não encontrado";
+            document.getElementById('character-description').textContent = "Não foi possível encontrar o personagem solicitado.";
+        }
+    </script>
+
+</body>
+</html>

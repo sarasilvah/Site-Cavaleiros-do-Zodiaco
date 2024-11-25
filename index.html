@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavaleiros do Zodíaco</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Cavaleiros do Zodíaco</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="personagem.html">Personagens</a></li>
+                <li><a href="episodios.html">Episódios</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="toggle-theme">
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="IMG/Banner.jpeg" alt="Cavaleiros do Zodíaco">
+        <div class="intro">
+            <h2>Bem-vindo ao mundo de Cavaleiros do Zodíaco</h2>
+            <p>Um universo de batalhas épicas e mitologia, onde guerreiros lutam pela deusa Atena.</p>
+        </div>
+    </section>
+
+    <!-- Galeria de Personagens -->
+    <section class="characters">
+        <h2>Personagens Principais</h2>
+        <div class="gallery">
+            <div class="character-card" onclick="showModal('seiya')">
+                <img src="IMG/Seiya.jpg" alt="Seiya de Pégaso">
+                <h3>Seiya de Pégaso</h3>
+                <p>O cavaleiro de Pégaso, corajoso e leal, sempre em busca de proteger Atena.</p>
+            </div>
+            <div class="character-card" onclick="showModal('hyoga')">
+                <img src="IMG/Hyoga de Cisne.webp" alt="Hyoga de Cisne">
+                <h3>Hyoga de Cisne</h3>
+                <p>Com poderes de gelo, ele enfrenta desafios com determinação e força interior.</p>
+            </div>
+            <div class="character-card" onclick="showModal('shiryu')">
+                <img src="IMG/Shiryuu de Dragão.jpeg" alt="Shiryu de Dragão">
+                <h3>Shiryu de Dragão</h3>
+                <p>Com um coração puro e a força do dragão, Shiryu é um dos cavaleiros mais poderosos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="characterModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cavaleiros do Zodíaco | Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

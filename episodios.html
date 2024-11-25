@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episódios - Cavaleiros do Zodíaco</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>Cavaleiros do Zodíaco - Episódios</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="personagem.html">Personagens</a></li>
+                <li><a href="episodios.html">Episódios</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <main class="episodes">
+        <h2>Lista de Episódios</h2>
+        <p>Explore a emocionante jornada dos Cavaleiros do Zodíaco! Aqui você encontra os principais episódios da série clássica, com detalhes que marcaram gerações.</p>
+        
+        <!-- Episódios Favoritos -->
+        <section class="favorites">
+            <h2>Episódios Favoritos</h2>
+            <br>
+            <div class="favorite-cards">
+                <!-- Episódio 124 -->
+                <div class="favorite-card">
+                    <img src="https://via.placeholder.com/150" alt="Episódio 124">
+                    <h3>Saga de Hades: A Exclamação de Atena</h3>
+                    <p>Número: 124</p>
+                    <p>Os Cavaleiros de Ouro unem forças para realizar o golpe proibido: a Exclamação de Atena.</p>
+                    <button class="trailer-btn" data-trailer="https://www.youtube.com/embed/DUMMY_URL_124">Assistir ao Trailer</button>
+                </div>
+                <!-- Episódio 28 -->
+                <div class="favorite-card">
+                    <img src="https://via.placeholder.com/150" alt="Episódio 28">
+                    <h3>O Golpe de Misericórdia do Dragão</h3>
+                    <p>Número: 28</p>
+                    <p>Shiryu usa seu golpe mais poderoso em uma batalha emocionante contra Máscara da Morte.</p>
+                    <button class="trailer-btn" data-trailer="https://www.youtube.com/embed/DUMMY_URL_28">Assistir ao Trailer</button>
+                </div>
+                <!-- Episódio 67 -->
+                <div class="favorite-card">
+                    <img src="https://via.placeholder.com/150" alt="Episódio 67">
+                    <h3>Adeus ao Meu Mestre e Meus Amigos</h3>
+                    <p>Número: 67</p>
+                    <p>Shun se despede de seus amigos e enfrenta um desafio emocionante.</p>
+                    <button class="trailer-btn" data-trailer="https://www.youtube.com/embed/DUMMY_URL_67">Assistir ao Trailer</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para Trailer -->
+    <div id="trailer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <iframe id="trailer-video" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cavaleiros do Zodíaco. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
